@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-solid fa-user"></i>
+    <hr />
+    <form>
+        <fieldset>
+            <legend>Register Form</legend>
+        <lable for="nameInput">Name<sup>*</sup></lable>
+        <input type="text" required id="nameInput" />
+        <label for="passwordInput">Password</label>
+        <input type="password" id="passwordInput" value="123456" name="password"/>
+
+<label>Email</label>
+<input type="email" />
+
+<label>Contact Number</label>
+<input type="text" pattern="^[6,7,8,9][0-9]{9}" placeholder="9812345670">
+
+<label>Search</label>
+<input type="seach" />
+
+<label>Age</label>
+<input type="number" min="0" max="100" step="5" />
+
+<label>Joining Date</label>
+<input type="date" />
+
+<label>Appointment</label>
+<input type="datetime-local" />
+
+<label>Upload File</label>
+<input type="file" />
+
+
+<input type="hidden" value="123456789" name="RegNo" />
+
+<input type="color" value="#ff0000"/>
+
+<label>Select Gender</label>
+<input type="radio" name="gender" value="male"/>Male
+<input type="radio" name="gender" value="female"/>Female
+<br />
+
+<label>Select Vehicles</label>
+<input type="checkbox" value="cycle" name="vehicle1" />Cycle 
+<input type="checkbox" value="bike" name="vehicle2"/>Bike 
+<input type="checkbox" value="car" name="vehicle3"/>Car
+
+
+<select name="subjects" size="2" >
+    <option value="html">HTML</option>
+    <option value="css">CSS</option>
+    <option value="js">JS</option>
+</select>
+<textarea cols="10" rows="10" ></textarea>
+
+
+<input type="range" min="0" max="600"  value="600"/>
+
+        <input type="submit" value="Register"/>
+        <button >Login</button>
+        <input type="reset" />
+        <input type="button" value="Click me"/>
+    </fieldset>
+    </form>
+</body>
+</html>
