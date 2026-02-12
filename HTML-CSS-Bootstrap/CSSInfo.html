@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS</title>
+    <link rel="icon" href="./assets/cssLOGO.png" />
     <style>
         *{
             font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
         body{
-            background-color: rgb(163, 154, 156);
+            /* background-color: rgb(163, 154, 156); */
+            background-image: linear-gradient(pink,orange);
+
         }
         /* p{
             color: blue;
@@ -28,9 +33,54 @@
         .GreenFont{
             color: green;
         }
+        .BGIMAGE{
+            height: 400px;
+            background-image: url('./assets/bgimg.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .checkBoxSizing{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            margin: 10px 30px 20px 5px;
+            padding :10px;
+            border: 5px solid green;
+            border-radius: 20px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+        .lGrad{
+            background-image: linear-gradient(to right bottom,red,yellow 40%,green,blue);
+        }
+        .rGrad{
+            background-image: radial-gradient(circle at 30% 20%, black,white, red);
+        }
+        .cGrad{
+            background-image: conic-gradient(from 90deg,purple,orange,yellow,rgb(152, 152, 254));
+        }
+        .gradText{
+            font-size: 50px;
+            font-weight: 800;
+            background:linear-gradient(to right bottom,red,yellow 40%,green,blue);
+            background-clip: text;
+            /* -webkit-background-clip: text; */
+            color: transparent;
+            /* -webkit-text-fill-color: transparent; */
+        }
     </style>
 </head>
 <body>
+    <div class="box lGrad" ></div>
+    <div class="box rGrad" ></div>
+    <div class="box cGrad" ></div>
+<div class="gradText">BATCH 82</div>
+
+    <img src="./assets/iPhoneProMax.webp" width="300" height="300" />
+    <div class="checkBoxSizing">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, natus.</div>
+    <div class="BGIMAGE"></div>
     <pre class="paraClass GreenFont">
         1. Inline CSS. added by style attribute
         2. Internal CSS added by style tag once in head tag
@@ -43,7 +93,13 @@ class -> represented with . (dot)
 ID -> represented with # 
         single element have unique id
 
+margin; padding ;Border;  box-sizing 
 
+box shadow 
+image as background
+image as icon 
+
+Linear , radial And Conic gradients
 
 
         CSS Selectors 
@@ -64,6 +120,6 @@ ID -> represented with #
 
     <p class="paraTwo GreenFont" id="twoDemo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt doloremque voluptatum odit, quaerat aliquam ullam delectus libero aut veritatis nostrum asperiores vero eveniet ut ab obcaecati itaque cumque, minus nesciunt?</p>
 
-
+<img 
 </body>
 </html>

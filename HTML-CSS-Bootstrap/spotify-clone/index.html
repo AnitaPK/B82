@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify Clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="nav-left">
+        <i class="fa-brands fa-spotify spotify-icon"></i>
+    </div>
+
+    <div class="nav-center">
+        <div class="home-btn">
+            <i class="fa-solid fa-house"></i>
+        </div>
+
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="What do you want to play?">
+        </div>
+    </div>
+
+    <div class="nav-right">
+        <span>Premium</span>
+        <span>Support</span>
+        <span>Download</span>
+        <button class="btn-outline">Sign up</button>
+        <button class="btn-fill">Log in</button>
+    </div>
+</header>
+
+<!-- ================= SIDEBAR ================= -->
+<aside class="sidebar">
+
+    <!-- Library top -->
+    <div class="library-top">
+        <h3>Your Library</h3>
+        <i class="fa-solid fa-plus"></i>
+    </div>
+
+    <!-- Scrollable content -->
+    <div class="library-content">
+        <div class="card">
+            <h4>Create your first playlist</h4>
+            <p>It's easy, we'll help you</p>
+            <button>Create playlist</button>
+        </div>
+
+        <div class="card">
+            <h4>Let’s find some podcasts</h4>
+            <p>We'll keep you updated on new episodes</p>
+            <button>Browse podcasts</button>
+        </div>
+    </div>
+
+    <!-- Bottom fixed -->
+<div class="sidebar-footer">
+    <div class="footer-links">
+        <span>Legal</span>
+        <span>Safety & Privacy Center</span>
+        <span>Privacy Policy</span>
+        <span>Cookies</span>
+        <span>About Ads</span>
+        <span>Accessibility</span>
+    </div>
+
+    <div class="footer-cookie">Cookies</div>
+
+    <button class="language-btn">
+        <i class="fa-solid fa-globe"></i>
+        English
+    </button>
+</div>
+
+</aside>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="main-content">
+
+    <section>
+        <div class="section-header">
+            <h2>Trending songs</h2>
+            <span>Show all</span>
+        </div>
+
+        <div class="card-row">
+            <div class="music-card">
+                <div class="img-wrapper">
+                    <img src="https://placehold.co/300x300">
+                    <div class="play-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <h4>Song Name</h4>
+                <p>Artist Name</p>
+            </div>
+
+            <div class="music-card">
+                <div class="img-wrapper">
+                    <img src="https://placehold.co/300x300">
+                    <div class="play-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <h4>Song Name</h4>
+                <p>Artist Name</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ================= BOTTOM BAR ================= -->
+<footer class="bottom-bar">
+    <p>Preview of Spotify</p>
+    <button class="btn-fill">Sign up for free</button>
+</footer>
+
+</body>
+</html>

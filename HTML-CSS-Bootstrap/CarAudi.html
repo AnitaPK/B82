@@ -7,7 +7,9 @@
     <title>Audi</title>
     <style>
         *{
-
+            box-sizing: border-box;
+            margin: 0;
+            /* padding: 0; */
         }
         .headerOne{
             background-color: black;
@@ -29,6 +31,7 @@
             background-color: gray;
             color: red;
             text-align: center;
+            padding: 20px;
         }
         img{
             border: 3px ridge black;
@@ -45,6 +48,12 @@
             color: white;
             text-align: center;
         }
+        .circleColor{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
     </style>
 </head>
 
@@ -54,7 +63,7 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae distinctio eligendi iusto, fugiat hic
         aperiam molestiae modi blanditiis atque quasi.</p>
 </header>
-
+<marquee>Sale Sale Sale</marquee>
 
 <section id="Gallery">
 
@@ -86,7 +95,10 @@
     <div>
         <h3 class="thirdHeading">Availability</h3>
         <div>Price : <del>1234567890</del> <span style="color: brown;">&#x20B9 12342345</span></div>
-        <div>Colors : <span>Red circle</span> <span>Blue Circle</span> <span>Black circle</span> <span>White Circle</span></div>
+        <div>Colors : <div class="circleColor" style="background-color: red;"></div> 
+        <div class="circleColor" style="background-color: blue;"></div>
+         <div class="circleColor" style="background-color: black;"></div>
+          <div class="circleColor" style="border: 1px solid black;"></div></div>
     </div>
     </section>
 
