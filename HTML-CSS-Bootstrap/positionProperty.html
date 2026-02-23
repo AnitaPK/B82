@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position property</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .conatinerOne{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+        }
+        .DemoChildOne{
+            width: 500px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            /* top ; bottom ; left; right; z-index  */
+            bottom: 0;
+            left: 20px;
+        }
+        .DemoChildTwo{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            position: absolute;
+            left:30%;
+            top:30%;
+        }
+        .DemoChildThree{
+            width: 50px;
+            height: 500px;
+            background-color: greenyellow;
+            position: absolute;
+            z-index: 1;
+        }
+        .navbar{
+            background-color: pink;
+            height: 100px;
+            width: 100%;
+            position: sticky;
+            top:0;
+            z-index: 10;
+        }
+        .GoToTop{
+            background-color: black;
+            color: white;
+            width: 70px;
+            height: 70px;
+            font-size: x-large;
+            border-radius: 50%;
+            padding-top: 20px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+        }
+ 
+    </style>
+</head>
+<body>
+    <nav class="navbar">Navbar</nav>
+    <div class="conatinerOne">
+        <div class="DemoChildOne"></div>
+        <div class="DemoChildTwo"></div>
+        <div class="DemoChildThree"></div>
+
+    </div>
+    <div style="height:300px">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus facilis quidem odit provident asperiores maiores minima accusantium laudantium inventore! Fugit, architecto. Perferendis aperiam modi molestiae ipsum maiores fugit consectetur similique in quam blanditiis, optio, ab iste voluptatibus, illo dolor repellat?</div>
+<div style="height: 300px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed earum molestiae ducimus quo. Rerum repudiandae itaque magni veniam vero adipisci officiis sint. Distinctio vel officia provident magni optio ipsa maxime.</div>
+
+
+
+
+<div class="GoToTop">
+    ^Top^
+</div>
+
+</body>
+</html>
