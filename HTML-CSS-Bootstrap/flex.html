@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: aquamarine;
+        }
+        .cotainerOne{
+            background-color: lightblue;
+            height: 400px;
+            display: flex;
+            /* flex-direction: row-reverse; */
+            gap:10px;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .item{
+            background-color: blue;
+            height: 100px;
+            /* width: 100px; */
+            color: white;
+            flex:1;
+        }
+        .lengthContent{
+            background-color: goldenrod;
+            width: 700px;
+            height: 100px;
+        }
+
+        @media screen and (max-width:600px){
+            body{
+                background-color: black;
+            }
+            .cotainerOne{
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        
+    </nav>
+    <div class="cotainerOne">
+        <div class="item" style="order: 1;">1</div>
+        <div class="item" style="order: 2;">2</div>
+        <div class="item" style="order: 3;">3</div>
+        <div class="item" style="order: 5;">4</div>
+        <div class="item" style="order: 4;">5</div>
+        <div class="lengthContent" style="order: 6;"></div>
+    </div>
+</body>
+</html>
