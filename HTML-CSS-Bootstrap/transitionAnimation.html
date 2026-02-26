@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .redBox{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .scaleBox:hover{
+            transform: scale(0.5,2);
+        }
+        .transBox:hover{
+            transform: translate(200px, 100px);
+        }
+        .rotateBox{
+            transform: rotate(180deg);
+        }
+        .skewBox{
+            transform: skew(50deg);
+        }
+        .transitionOne{
+            transition: width 3s, background-color 2s, font-size 3s linear, transform 5s;
+            font-size: 20px;
+        }
+        .transitionOne:hover{
+            width: 150px;
+            background-color: aqua;
+            font-size: 60px;
+            transform: rotate(180deg);
+        }
+        .animationOne{
+            animation: aniModeOne 10s;
+        }
+
+
+        @keyframes aniModeOne{
+            from{
+                background-color: red;
+                color: black;
+            }
+            to{
+                background-color: black;
+                color: white;
+            }
+        }
+        .animationTwo{
+            animation: aniModeTwo 5s 10s;
+        }
+        @keyframes aniModeTwo{
+            0%{
+                background-color: red;
+                color: black;
+                transform: rotate(45deg);
+            }
+            30%{
+                transform: translateX(300px);
+            }
+            50%{
+                background-color: black;
+                color: white;
+                font-size: xx-large;
+                transform: rotate(-45deg);
+            }
+            55%{
+                transform: rotate(45deg);
+
+            }
+            60%{
+                
+            }
+            100%{
+                background-color: white;
+                color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="redBox animationTwo">Holi</div>
+
+    <div class="redBox animationOne">Holi</div>
+
+
+
+
+    <div class="redBox transitionOne">HOLI</div>
+
+
+
+
+
+    <!-- transform  -->
+    <div class="redBox"></div>
+    <div class="redBox scaleBox"></div>
+    <div class="redBox transBox"></div>
+    <div class="redBox rotateBox">1234567</div>
+
+    <div class="redBox skewBox"></div>
+
+
+</body>
+</html>
