@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <style>
+        .customBGFooter{
+            background-color: rgb(201, 201, 201);
+
+        }
+        .floatingBox{
+            position: relative;
+        }
+        .floatingBox input{
+            width: 230px;
+            padding: 17px 13px;
+            border: 1px solid black;
+            outline: none;
+            border-radius: 8px;
+        }
+        .lableFloat{
+            position: absolute;
+            top:15px;
+            left: 13px;
+            color: black;
+            transition: .5s;
+        }
+        .floatingBox input:focus+.lableFloat{
+            top:-12px;
+            background-color: black;
+            color: white;
+            padding: 3px ;
+            border-radius: 5px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1 class="text-center py-4">Hello, world!</h1>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit odio perferendis temporibus quisquam aut, maiores quis. Eum ipsam magnam placeat necessitatibus soluta fuga vitae ullam quasi ipsum inventore! Officia, quasi?</p>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, reprehenderit pariatur expedita cupiditate tenetur recusandae! Distinctio, hic nam accusamus, exercitationem sed doloribus ab reprehenderit debitis similique vitae magnam dolorum ipsa maiores accusantium totam rem deserunt perspiciatis cum asperiores aut voluptas!
+    </div>
+    <div class="container-fluid">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In modi incidunt non quisquam quod maxime assumenda voluptatibus officia totam? Aliquid, cumque dolorem aut consectetur reprehenderit porro, id similique eius tempora molestiae nisi tenetur magni ab consequatur, omnis officia vel possimus.
+    </div>
+    <div class="colors">
+        <p class="text-primary">Primary</p>
+        <p class="bg-secondary"> Secondary</p>
+        <p><button class="btn btn-success">Success </button></p>
+        <p><button class="btn btn-outline-danger">Danger</button></p>
+        <p class="text-info">Info</p>
+        <p class="text-warning">Warning</p>
+        <p class="dark">Dark</p>
+        <p class="text-light bg-dark">light</p>
+    </div>
+    <div class="container customBGFooter">
+        <div class="row">
+            <div class="col-3">
+                Products
+            </div>
+            <div class="col-3">
+                Customer Support
+            </div>
+            <div class="col-3">
+                    Corporate
+            </div>
+            <div class="col-3">
+Warranty
+            </div>
+
+        </div>
+    </div>
+    <div class="floatingBox">
+        <input type="text" id="t1">
+        <label for="t1" class="lableFloat">User Name</label>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
