@@ -1,0 +1,19 @@
+:root{
+    --maroonColor : #B53232;
+    --bgPage:#B9B9B9
+}
+body{
+    background-color: var(--bgPage);
+}
+.mainHeading{
+width:585px;
+height: 234px;
+}
+.mainHeading h1{
+    font-size: 130px;
+    line-height: 90%;
+}
+
+.maroonColor{
+    color: var(--maroonColor);
+}
