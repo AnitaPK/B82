@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Output</h1>
+
+    <h3 id="messOne"></h3>
+    <p id="para"></p>
+
+    <button onclick="batch82FirstFunction()">Remove All</button>
+    <button onclick="Add2And2()">Click me to show2+2</button>
+
+    <script>
+        function Add2And2(){
+            console.log(2+2)
+        }
+        function batch82FirstFunction() {
+            document.write("I am the only text showing on browser")
+        }
+    </script>
+
+    <script>
+        document.getElementById('messOne').textContent = 'Hello World'
+
+        document.getElementById('para').innerHTML = 'Hi Hello Hi Hello '
+
+        alert('Hell0 B82')
+
+        document.write("...... Hello from write .....")
+
+        console.log("Hello from console")
+
+    </script>
+
+
+</body>
+
+</html>
