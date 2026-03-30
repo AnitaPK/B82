@@ -9,7 +9,9 @@ document.getElementById("descrip").textContent = "werty dfgh rtyu fgh rty fgh"
 function updateTask(ind){
     console.log(ind,"Updated")
     ulElmts = document.getElementById("tasksUL")
-    console.log(ulElmts,"Update function")
+    console.log(ulElmts,"Update function")    
+
+    // updatedValue = prompt("Enter updated task:");
 }
 function deleteTask(ind){
     tasks.splice(ind,1)

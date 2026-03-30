@@ -133,3 +133,51 @@ arr = [2,3,4]
 arr1 = [5,6,7,8]
 arrayNum =arr.concat(arr1, [11,12,13])
 console.log(arrayNum)
+
+
+
+// Create a function to merge two arrays without duplicates. 
+
+arr1 = [2, 3, 4, 7]
+arr2 = [3, 5, 7, 9, 10]
+// create a function to merge two arrays without duplicates javascript arr1=[2,3,4,7] arr2=[3,5,7,9,10]. Without using inbuilt functions
+let arr1 = [2,3,4,7]
+let arr2 = [3,5,7,9,10]
+
+let result = []
+
+for(let i = 0; i < arr1.length; i++){
+    result[result.length] = arr1[i]
+}
+
+for(let i = 0; i < arr2.length; i++){
+    let found = false
+
+    for(let j = 0; j < result.length; j++){
+        if(arr2[i] === result[j]){
+            found = true
+            break
+        }
+    }
+
+    if(found === false){
+        result[result.length] = arr2[i]
+    }
+}
+
+console.log(result)
+// Create a function that rotates an array to the right by k steps. 
+
+aarr1 = [121,232,343,454,565]
+
+n = 3 
+
+// Write a function that finds the intersection of two arrays. 
+
+let arr11 = [2,3,4,3,7]
+let arr22 = [3,5,3,7,9,10]
+
+intersection11 = [3,3,7]
+
+
+
