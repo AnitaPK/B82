@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+    localStorage 
+
+    sessionStorage 
+
+    Cookies  
+
+    Cache 
+
+    http Authorization 
+    </pre>
+
+
+    <script>
+        name1 = 'wisdom Sprouts'
+
+        localStorage.setItem("cName", name1)
+
+        cSTring = localStorage.getItem("cName")
+        console.log(cSTring)
+
+
+        emp = {
+            "name":"rtyu",
+            age:20,
+            city:"pune"
+        }
+        console.log(emp.city)
+        localStorage.setItem('emp1',JSON.stringify(emp))
+        empSTRING =JSON.parse(localStorage.getItem("emp1"))
+        console.log(empSTRING)
+        console.log(typeof(empSTRING))
+
+        fruits = ["Apple","Banana","Mango"]
+        localStorage.setItem("fru",JSON.stringify(fruits))
+
+        fruFromLocal = JSON.parse(localStorage.getItem('fru'))
+        console.log('fruFromLocal', fruFromLocal)
+        console.log(typeof(fruFromLocal))
+    </script>
+</body>
+</html>

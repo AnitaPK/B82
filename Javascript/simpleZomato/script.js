@@ -19,6 +19,22 @@ const dishes = [{
 const cart = []
 // {name, price, discount,quantity}
 
+function savedToLocalDish(forLocalStorage){
+    localStorage.setItem("dishes", JSON.stringify(forLocalStorage))
+}
+
+function getFromLocalDish(){
+    return JSON.parse(localStorage.getItem('dishes'))
+}
+
+function savedToLocalCart(c){
+    localStorage.setItem('cart',JSON.stringify(c))
+}
+
+function getCartFromLocal(){
+    return JSON.parse(localStorage.getItem('cart'))
+}
+
 nameInput = document.querySelector("#nameInput")
 descriptionInput = document.querySelector("#descriptionInput")
 priceInput = document.querySelector("#priceInput")
@@ -28,9 +44,9 @@ categoryNonVegInput = document.querySelector("#nonvegInput")
 ratingInput = document.querySelector("#selectRating")
 
 
-function renderDishes() {
+function renderDishes(dishes1) {
 
-    document.querySelector("#showDishes").innerHTML = dishes.map((dish, i) => `
+    document.querySelector("#showDishes").innerHTML = dishes1.map((dish, i) => `
                 <div class='col-12 col-md-6 col-lg-3'>
                         <div class="card " style="width: 18rem;">
                             <div class="card-body">
@@ -47,32 +63,45 @@ function renderDishes() {
 
 
 function addNewDish() {
+    // const category =  categoryVegInput.checked ? "veg" : "non-veg"
+    if(categoryVegInput.checked){
+
+        category = "veg"
+    }else{
+        category = "non-veg"
+    }
     const newDish = {
         id: Date.now(),
         name: nameInput.value,
         description: descriptionInput.value,
         price: priceInput.value,
         discount: discountInput.value,
-        category: "veg",
+        category:category,
         rating: ratingInput.value
     }
     console.log(newDish)
-    dishes.push(newDish)
+    dishesFRomLocal = getFromLocalDish()
+    dishesFRomLocal.push(newDish)
+    savedToLocalDish(dishesFRomLocal)
+    // remove values from input elements 
+    // close the modal after succesful add 
     console.log(dishes)
-    renderDishes()
+    renderDishes(dishesFRomLocal)
 }
 
 function AddToCart(ID) {
 
-    index = cart.findIndex((dInC, i) => dInC.dish_id == ID)
+    getCFromLocal = getCartFromLocal()
+    index = getCFromLocal.findIndex((dInC, i) => dInC.dish_id == ID)
 
     if (index != -1) {
-        cart[index].quantity +=1
+        getCFromLocal[index].quantity +=1
+        
         console.log("quantity.cart ******",cart)
 
     } else {
-
-        const dishForCart = dishes.find((d) => d.id == ID)
+        getFromLocalDishes = getFromLocalDish()
+        const dishForCart = getFromLocalDishes.find((d) => d.id == ID)
 
         const dishInCart = {
             id: Date.now(),
@@ -88,6 +117,18 @@ function AddToCart(ID) {
     document.getElementById("cartLength").textContent = cart.length
 }
 
+document.addEventListener('DOMContentLoaded',()=>{
 
+    alreadySavedDish = getFromLocalDish()
+    if(!alreadySavedDish){
+        savedToLocalDish(dishes)
+    }
 
-renderDishes()
+    renderDishes(alreadySavedDish)
+
+    savedCArt = getCartFromLocal()
+    if(!savedCArt){
+        savedToLocalCart([])
+    }
+
+})
