@@ -1,0 +1,8 @@
+body{
+    background-color: #f0c16a !important;
+}
+
+
+.GradEffect{
+    background-image: linear-gradient(orange, red, orange);
+}
