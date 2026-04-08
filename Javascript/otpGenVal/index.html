@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body class="bg-info">
+
+    <div class="container">
+        <div class="row p-3">
+            <div class="col p-4">
+                <div class="container bg-light p-3 m-5 rounded">
+                    <h2>Lorem ipsum dolor consectetur.</h2>
+                    <p>Lorem ipsum dolor sit amet Voluptates cum quam voluptatum quae illum delectus? Perferendis.</p>
+                    <div class="container w-50 d-flex">
+                        <input type="text" size="1" mix-size="1" id="inputOne" 
+                        class="form-control me-3" oninput="toNextInput('inputTwo')"/>
+                        <input type="text" size="1" mix-size="1" id="inputTwo" 
+                        class="form-control me-3" oninput="toNextInput('inputThree')" />
+                        <input type="text" size="1" mix-size="1" id="inputThree" 
+                        class="form-control me-3" oninput="toNextInput('inputFour')" />
+                        <input type="text" size="1" mix-size="1" id="inputFour" 
+                        class="form-control me-3" oninput="toNextInput('result11')" />
+                    </div>
+                    <div class="container w-50 mt-3">
+
+                    <button class="btn btn-info w-100" id="result11">Verify</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col p-4">
+                <p class="lead display-3 p-5">OTP VARIFICATION FORM</p>
+            </div>
+        </div>
+    </div>
+
+<div class="position-fixed bottom-0 start-0">
+    <button id="generateOTP" >Generate OTP</button>
+</div>
+
+<script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
