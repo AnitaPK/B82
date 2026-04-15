@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .boxOne{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1> A <span>Heading </span></h1>
+
+    <a href="www.google.com">My Lnk</a>
+
+
+    <p id="paraDemo"></p>
+
+    <div class="boxOne">0000Lorem, ipsum dolor.</div>
+
+    <div class="boxOne">1111Lorem, ipsum dolor.</div>
+    <h1 class="boxOne">2222Lorem, ipsum dolor.</h1>
+    <div class="boxOne">333Lorem, ipsum dolor.</div>
+
+
+    <p class="boxOne">44444444444444</p>
+
+<script>
+    boxOneCollection = document.getElementsByClassName("boxOne")
+    console.log(boxOneCollection[1])
+
+    // boxOneCollection[1].style.borderColor = 'blue'
+
+    boxOneCollectionArray = Array.from(boxOneCollection)
+
+
+    boxOneCollectionArray.forEach((elmt)=>{
+        elmt.style.borderColor = "blue"
+    })
+
+
+    h1Array.forEach(el=>{el.style.color = '#45f4A3'})
+
+</script>
+
+    <script>
+         // DOM = DOCUMENT OBJECT MODEL
+// Object{} that represents the page you see in the web browser
+// and provides you with an API to interact with it.
+// Web browser constructs the DOM when it loads an HTML document,
+// and structures all the elements in a tree-like representation.
+// JavaScript can access the DOM to dynamically
+// change the content, structure, and style of a web page.
+
+// Methods 
+
+// element selectors = Methods used to target and manipulate HTML elements
+// They allow you to select one or multiple HTML elements
+// from the DOM (Document Object Model)
+
+// 1. document.getElementById() // ELEMENT OR NULL
+// 2. document.getElementsClassName() // HTML COLLECTION
+// 3. document.getElementsByTagName() // HTML COLLECTION
+// 4. document.querySelector() // ELEMENT OR NULL
+// 5. document.querySelectorAll() // NODELIST
+
+    </script>
+</body>
+</html>

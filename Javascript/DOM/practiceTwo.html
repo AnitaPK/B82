@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .textOne {
+            text-align: right;
+            text-decoration: line-through;
+
+        }
+
+        .textShadow:hover {
+            text-shadow: 2px 2px 2px red, 1px 1px 3px black;
+        }
+
+        .textColor {
+            color: blue;
+        }
+
+        .imgggg {
+            width: 70px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="secOne"></section>
+
+
+
+
+    <script>
+        PElmt = document.createElement('p')
+        console.log(PElmt)
+
+
+        pDescrip = document.createTextNode("thi is paragraph will show it on browser")
+        console.log(pDescrip)
+        PElmt.appendChild(pDescrip)
+
+        PElmt.style.color = 'red'
+        PElmt.style.textAlign = 'center'
+        console.log(PElmt)
+
+        document.querySelector("#secOne").appendChild(PElmt)
+
+        PElmt.addEventListener('mouseover', ()=>{
+            PElmt.style.textShadow = '1px 1px 1px yellow'
+        })
+                PElmt.addEventListener('mouseout', ()=>{
+            PElmt.style.textShadow = ''
+        })
+
+
+
+        h1Elmt = document.createElement('h1')
+        h1Descrip = document.createTextNode("this is Heading will show it on browser")
+
+        h1Elmt.appendChild(h1Descrip)
+
+        h1Elmt.classList.add('textOne', 'textShadow', 'textColor')
+
+        document.querySelector("#secOne").appendChild(h1Elmt)
+
+
+
+
+        btnElmt = document.createElement('button')
+
+        textContent1 = document.createTextNode("Change to black")
+
+        btnElmt.appendChild(textContent1)
+        document.querySelector("#secOne").appendChild(btnElmt)
+
+        btnElmt.addEventListener('click', () => {
+            h1Elmt.classList.remove('textColor')
+        })
+
+        imgElmt = document.createElement('img')
+
+        imgElmt.setAttribute("alt", "Image not shown.....")
+
+
+        document.body.appendChild(imgElmt)
+
+        imgElmt.setAttribute('src', './oniii.png')
+        imgElmt.classList.add('imgggg')
+
+        imgElmt.addEventListener('click', () => {
+
+            if (imgElmt.getAttribute('src') == './oniii.png') {
+                imgElmt.setAttribute('src', './offiii.png')
+            } else {
+                imgElmt.setAttribute('src', './oniii.png')
+
+            }
+        })
+
+    </script>
+
+
+</body>
+
+</html>
