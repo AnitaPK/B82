@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .display {
+            display: none
+        }
+
+        .showContent {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="fetchFromDB()">Fetch Data</button>
+    <script>
+        let raining = false
+        function adityaAndDheerajPlan() {
+                  const chaiWithAditya = new Promise((resolve, reject) => {
+            if (raining) {
+                resolve("Had tea with Aditay")
+            }else{
+                reject("Its not RAINING")
+            }
+        })
+            chaiWithAditya
+                .then(res => console.log(res))
+                .catch(err => console.log(err))
+        }
+setTimeout(adityaAndDheerajPlan, 2)
+
+async function fetchFromDB(){
+    
+await fetch('https://674e84f1635bad45618eebc1.mockapi.io/api/v1/projects')
+.then(res=>res.json())
+.then(data=>console.log(data))
+.catch(err=>console.log(err))
+.finally(()=>console.log("End"))
+    }
+    </script>
+
+    <h1><span id="hr"></span>:<span id="min"></span>:<span id="sec"></span></h1>
+
+
+    <script>
+        setInterval(() => {
+            const today = new Date()
+            // console.log(today)
+            // console.log(today.getHours())
+            document.getElementById('hr').textContent = today.getHours()
+            document.getElementById('min').textContent = today.getMinutes()
+            document.getElementById('sec').textContent = today.getSeconds()
+        }, 1000)
+
+
+    </script>
+
+    <h1 id="countDown5"></h1>
+
+    <script>
+        function countDown(count) {
+            let remainingCount = count
+
+
+            const time = setInterval(() => {
+                document.getElementById("countDown5").textContent = remainingCount
+
+                remainingCount--
+                if (remainingCount < 0) {
+                    clearInterval(time)
+                    document.getElementById("countDown5").textContent = 'Times Up'
+                }
+            }, 1000)
+
+
+        }
+
+
+        countDown(5)
+    </script>
+
+
+
+    <div style="font-size: 60px; color: blue; text-align: center;" id="Loading">Loading</div>
+
+    <div style="font-size: 60px; color: red; text-align: center;" class="display" id="pageData">Lorem ipsum dolor sit
+        amet consectetur, adipisicing elit. Incidunt fugiat deleniti ut veritatis voluptate in necessitatibus maxime
+        cumque, repudiandae error delectus animi recusandae laborum fuga numquam corporis magni.</div>
+
+
+    <script>
+
+        function fetchData() {
+            document.getElementById("Loading").classList.add('display')
+            document.getElementById("pageData").classList.remove('display')
+            document.getElementById("pageData").classList.add('showContent')
+        }
+
+        // document.body.addEventListener('DOMContentLoaded',()=>{} )
+
+        setTimeout(fetchData, 10000)
+    </script>
+
+
+
+    <script>
+        function print1_10() {
+            for (i = 0; i <= 10; i++) {
+                console.log(i)
+            }
+        }
+        console.log("**************")
+        console.log("Start")
+        print1_10()
+        console.log("End")
+
+        console.log("using set time out**************")
+
+        console.log("Start")
+        setTimeout(print1_10, 5000)
+        console.log("End")
+    </script>
+
+
+
+
+</body>
+
+</html>
