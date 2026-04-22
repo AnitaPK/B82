@@ -15,16 +15,16 @@
 <nav class="ps-5 container">
     <input type="text" id="searchKey"/>
     <button id="searchBTN" class="btn btn-primary">Search (Add icon)</button>
-    <select id=" "selectStatus>
+    <select id="selectStatus">
         <option value="">Select status</option>
-        <option value="Completed'>Completed</option>
+        <option value="Completed">Completed</option>
         <option value="In Progress">In progress</option>
     </select>
-
+<button onclick="filterByStatus()">Filter</button>
 
 </nav>
 
-    <div class="container" style="height: 600px; overflow:auto;">
+    <div class="container" style="height: 700px;">
         <table class="table">
             <thead>
                 <tr>
@@ -41,7 +41,11 @@
         </table>
     </div>
 
-
+<nav aria-label="Page navigation example">
+  <ul class="pagination" id="paginationList">
+    
+  </ul>
+</nav>
 
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
