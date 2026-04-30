@@ -1,0 +1,15 @@
+.container1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.character{
+    width: 15rem;
+    height: 15rem;
+    background-color: blue;
+    color:white;
+    border-radius: 50%;
+    border: 2px solid black,2px solid red,2px solid green,2px solid purple,;
+    padding: 20px;
+    text-align: center;
+}
