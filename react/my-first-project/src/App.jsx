@@ -1,4 +1,5 @@
 import { Button } from "./components/Button"
+import FormComponent from "./components/FormComponent"
 import Header from "./components/Header"
 import HeaderClassBased from "./components/HeaderClassBased"
 import Profile from "./components/Profile"
@@ -8,6 +9,7 @@ function App() {
 
   return (
     <>
+    <FormComponent />
     <Counter />
     <pre>
      1.  Create function based and class based Header component 
