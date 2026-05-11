@@ -1,11 +1,15 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import Navbar from '../components/Navbar'
+import Card from '../components/Card'
+import { ThemeContext } from '../theme/ThemeProvider'
 
 const Dashboard = () => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
+    const { theme } = useContext(ThemeContext)
 
     async function fetchData() {
         try {
@@ -43,26 +47,22 @@ const Dashboard = () => {
 
     return (
         <>
+            <Navbar />
+
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-2 bg-secondary"></div>
-                    <div className="col-10">
+                    <div className="col-2 sticky-top overflow-hidden vh-100" style={{ backgroundColor: "#dddddd" }}>
+                        <input />
+                        <button>Search</button>
+                    </div>
+                    <div className={`col-10 ${theme == 'light' ? 'bg-light text-dark' : 'bg-secondary text-white'} `}>
                         <div>Product List </div>
                         <div className="container">
                             <div className="row">
                                 {
                                     products.map((p, i) => (
                                         <div className="col-12 col-md-3" key={i}>
-                                            <div className="card" style={{width: "18rem"}}>
-                                                <img src={p.thumbnail} className="card-img-top" alt="..." />
-                                                    <div className="card-body">
-                                                        <h5 className="card-title text-primary">{p.title}</h5>
-                                                        <p className="card-text">{p.description.slice(0,50)}... </p>
-                                                        <p>Price ₹ {p.price}</p>
-                                                        <Link to={`/product/${p.id}`} className="btn btn-primary">Expore</Link>
-                                                        <button className='btn btn-warning'>Add To Cart</button>
-                                                    </div>
-                                            </div>
+                                            <Card p={p} />
                                         </div>
                                     ))
                                 }
