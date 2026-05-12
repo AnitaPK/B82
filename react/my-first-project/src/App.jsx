@@ -1,3 +1,4 @@
+import CoinCollector from "./coinCollector/CoinCollector"
 import { Button } from "./components/Button"
 import FormComponent from "./components/FormComponent"
 import Header from "./components/Header"
@@ -9,6 +10,7 @@ function App() {
 
   return (
     <>
+    <CoinCollector />
     <FormComponent />
     <Counter />
     <pre>
