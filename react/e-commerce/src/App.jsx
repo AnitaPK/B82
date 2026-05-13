@@ -5,10 +5,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ProductDetails from './pages/ProductDetails'
 import LoginPage from './pages/Loginpage'
 import RegisterPage from './pages/RegisterPage'
+import CartProvider from './CART/CartProvider'
 
 function App() {
 
   return (
+    <CartProvider>
     <BrowserRouter>
 
       <Routes>
@@ -19,6 +21,7 @@ function App() {
         <Route path='/products/:ID' element={<ProductDetails />}></Route>
       </Routes>
     </BrowserRouter>
+    </CartProvider>
   )
 }
 

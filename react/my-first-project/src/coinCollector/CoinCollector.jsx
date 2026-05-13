@@ -23,7 +23,6 @@ function coinReducer(state, action){
         default:
             return state
     }
-
 }
 
 const CoinCollector = () => {

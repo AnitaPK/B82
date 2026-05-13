@@ -4,10 +4,12 @@ import { BsToggleOff } from "react-icons/bs";
 import { BsToggleOn } from "react-icons/bs";
 import { ThemeContext } from '../theme/ThemeProvider';
 import { FaCartArrowDown } from "react-icons/fa";
+import { CartContext } from '../CART/CartProvider';
 
 const Navbar = () => {
 
     const { theme, toggleTheme } = useContext(ThemeContext)
+    const {state,dispatch} = useContext(CartContext)
 
 
     return (
@@ -30,11 +32,13 @@ const Navbar = () => {
                     </ul>
                     <div className="d-flex " role="search">
                         <button className="btn btn-outline-success" >Login</button>
-                        <Link className="nav-link ms-3 bg-primary rounded-circle p-2" >
+                        <Link className="nav-link ms-3 bg-primary rounded-circle p-2 text-white" >
                         <FaCartArrowDown /> 
                         <sup 
                         // className='badge bg-danger'
-                        >0</sup>
+                        >
+                            {state.len}
+                            </sup>
                         </Link>
                         <button style={{ border: "0px" }}
                         onClick={toggleTheme}
