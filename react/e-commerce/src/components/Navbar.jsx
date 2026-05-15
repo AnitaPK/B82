@@ -32,7 +32,9 @@ const Navbar = () => {
                     </ul>
                     <div className="d-flex " role="search">
                         <button className="btn btn-outline-success" >Login</button>
-                        <Link className="nav-link ms-3 bg-primary rounded-circle p-2 text-white" >
+                        {/* update above line with condition depends on user (global state) 
+                        show user name and logout if user is there OR login  */}
+                        <Link className="nav-link ms-3 bg-primary rounded-circle p-2 text-white" to='/cart'>
                         <FaCartArrowDown /> 
                         <sup 
                         // className='badge bg-danger'

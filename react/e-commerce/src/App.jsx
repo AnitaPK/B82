@@ -6,19 +6,23 @@ import ProductDetails from './pages/ProductDetails'
 import LoginPage from './pages/Loginpage'
 import RegisterPage from './pages/RegisterPage'
 import CartProvider from './CART/CartProvider'
+import AuthProvider from './Auth/AuthProvider'
+import CartPage from './pages/CartPage'
 
 function App() {
 
   return (
+    // <AuthProvider></AuthProvider>
     <CartProvider>
     <BrowserRouter>
 
       <Routes>
-        <Route path='/login' element={<LoginPage />}></Route>
+        <Route path='/' element={<LoginPage />}></Route>
         <Route path='/register' element={<RegisterPage />}></Route>
 
-        <Route path='/' element={<Dashboard />}></Route>
+        <Route path='/dashboard' element={<Dashboard />}></Route>
         <Route path='/products/:ID' element={<ProductDetails />}></Route>
+        <Route path='/cart' element={<CartPage />}></Route>
       </Routes>
     </BrowserRouter>
     </CartProvider>

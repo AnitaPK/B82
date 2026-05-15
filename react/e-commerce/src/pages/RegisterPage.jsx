@@ -57,7 +57,7 @@ const RegisterPage = () => {
                                 <label htmlFor="floatingPassword">Password</label>
                             </div>
                             <button className='btn btn-primary mt-4' type='submit'>Register</button>
-                            <Link to='/login' >If Already Registered</Link>
+                            <Link to='/' >If Already Registered</Link>
                         </form>
                         </div>
                     </div>

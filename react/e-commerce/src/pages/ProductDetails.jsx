@@ -51,7 +51,7 @@ const ProductDetails = () => {
         theme === 'dark' ? 'dark-theme' : ''
       }`}
     >
-      <Link className="back-btn" to="/">
+      <Link className="back-btn" to="/dashboard">
         ← Back
       </Link>
 
