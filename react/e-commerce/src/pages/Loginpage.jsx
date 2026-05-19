@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { SiSimplelogin } from "react-icons/si";
 import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
@@ -9,6 +9,7 @@ const LoginPage = () => {
     const [password, setPassword] = useState()
     const [regUser ,setRegUser] = useState()
     const navigate = useNavigate()
+    const inputEmailRef = useRef()
 
     function handleLoginForm(e){
         e.preventDefault()
@@ -22,8 +23,8 @@ const LoginPage = () => {
         }else{
             toast.error("Invalid User")
         }
+}
 
-    }
     function fetchRegUser(){
         const u =JSON.parse(localStorage.getItem("b82"))
         setRegUser(u)
@@ -31,6 +32,10 @@ const LoginPage = () => {
 
     useEffect(()=>{
         fetchRegUser()
+    },[])
+
+    useEffect(()=>{
+        inputEmailRef.current.focus()
     },[])
 
     return (
@@ -52,6 +57,7 @@ const LoginPage = () => {
                             <div className="form-floating mb-3">
                                 <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" 
                                 onChange={(e)=>setEmail(e.target.value)}
+                                ref={inputEmailRef}
                                 />
                                 <label for="floatingInput">Email address</label>
                             </div>
