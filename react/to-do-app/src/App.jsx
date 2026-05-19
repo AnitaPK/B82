@@ -8,11 +8,12 @@ function App() {
   const [list,setList] = useState([])
 
   function fetchData(){
+const listFromLocal = JSON.parse(localStorage.getItem("b82list"))
 
-    const listFromlocal = JSON.parse(localStorage.getItem("b82list"))
-    setList(listFromlocal)
-    if(!listFromlocal){
-    localStorage.setItem('b82list',JSON.stringify(list))
+    if (listFromLocal) {
+      setList(listFromLocal)
+    } else {
+      localStorage.setItem("b82list", JSON.stringify([]))
     }
   }
 
@@ -23,7 +24,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<TodoList list={list} />}></Route>
+        <Route path='/' element={<TodoList list={list} setList={setList}/>}></Route>
         <Route path='/create' element={<CreateToDo setList={setList} list={list} />}></Route>
       </Routes>
      </BrowserRouter>
