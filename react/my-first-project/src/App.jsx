@@ -5,11 +5,13 @@ import Header from "./components/Header"
 import HeaderClassBased from "./components/HeaderClassBased"
 import Profile from "./components/Profile"
 import Counter from "./CounterApp/Counter"
+import ParentAndChild from "./useCallbackReactMemo/ParentAndChild"
 
 function App() {
 
   return (
     <>
+    <ParentAndChild />
     <CoinCollector />
     <FormComponent />
     <Counter />
